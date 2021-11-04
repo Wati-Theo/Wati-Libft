@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <Wati-Theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:42:44 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/03 20:55:31 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/04 02:32:47 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

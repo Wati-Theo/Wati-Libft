@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <Wati-Theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:19:43 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/03 20:54:51 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/04 02:28:41 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

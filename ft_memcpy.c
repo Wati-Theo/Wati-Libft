@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <Wati-Theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:59:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/03 20:11:09 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/04 02:32:55 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
