@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:23:05 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/04 17:41:42 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/05 16:04:45 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	dst[i] = '\0';
 	return (ft_strlen(src));
-}
-
-int main(void)
-{
-	unsigned int res;
-  char a[100] = "hshshs";
-	char b[] = "abcdefgh";
-	char c[] = "hshshs";
-	char d[] = "abcdefgh";
-	int size = 15;
-
-    printf("Output: %i\nExpected output: %i\n", ft_strlcpy(a, b, size), strlcpy(c,d, size));
-    printf("char copied: %s\nExpected char copied: %s\n",a,c);
-	return (0);
 }
