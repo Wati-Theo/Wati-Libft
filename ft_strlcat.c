@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 14:23:05 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/04 17:41:42 by tschlege         ###   ########lyon.fr   */
+/*   Created: 2021/11/04 17:09:28 by tschlege          #+#    #+#             */
+/*   Updated: 2021/11/04 17:13:12 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char * src, size_t dstsize)
 {
 	size_t	i;
 
@@ -28,16 +28,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-int main(void)
+int	main(void)
 {
-	unsigned int res;
-  char a[100] = "hshshs";
-	char b[] = "abcdefgh";
-	char c[] = "hshshs";
-	char d[] = "abcdefgh";
-	int size = 15;
+	char	dst[] = "bonjour";
+	char	src[] = "jourbon";
+	
+	printf("%d\n %s\n", strlcpy(dst, src, 7), dst);
 
-    printf("Output: %i\nExpected output: %i\n", ft_strlcpy(a, b, size), strlcpy(c,d, size));
-    printf("char copied: %s\nExpected char copied: %s\n",a,c);
-	return (0);
+	char	dst1[] = "bonjour";
+	char	src1[] = "jourbon";
+	
+	printf("%d\n %s\n", ft_strlcpy(dst1, src1, 7), dst);
 }
