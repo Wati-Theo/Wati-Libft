@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:12:53 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/03 11:24:42 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/05 18:35:36 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha || ft_isdigit))
+	if ((ft_isalpha(c) || ft_isdigit(c)))
 		return (1);
 	return (0);
 }
