@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 12:27:23 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/06 15:12:35 by tschlege         ###   ########lyon.fr   */
+/*   Created: 2021/11/06 17:43:35 by tschlege          #+#    #+#             */
+/*   Updated: 2021/11/06 18:35:59 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	size;
+	size_t	i;
 
-	size = ft_strlen(s) + 1;
+	i = 0;
 	if (!s)
 		return (NULL);
-	while (size + 1)
+	while (i < n)
 	{
-		if (s[size] == c)
-			return ((char *)s + size);
-		size--;
+		if (((char *)s)[i] == c)
+			return ((char *)s + i);
+		i++;
 	}
 	return (NULL);
 }
