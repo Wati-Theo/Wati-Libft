@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 20:33:06 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/08 15:48:32 by tschlege         ###   ########lyon.fr   */
+/*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
+/*   Updated: 2021/11/08 18:28:39 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
-
-	i = 0;
-	if (!s)
-		return (NULL);
-	while (s[i])
-	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)s + i);
-		i++;
-	}
-	if (s[i] == (unsigned char)c)
-		return (&(((char *)s)[i]));
-	return (NULL);
+	
 }
