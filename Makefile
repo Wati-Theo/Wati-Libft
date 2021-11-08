@@ -22,7 +22,8 @@ SRCFILES=   ft_isalnum.c \
 			ft_calloc.c  \
 			ft_strdup.c  \
 			ft_substr.c  \
-			ft_strjoin.c
+			ft_strjoin.c \
+			ft_strtrim.c
 
 HEADFILES=	libft.h
 
@@ -32,13 +33,13 @@ NAME=		libft.a
 
 CC=			gcc
 
-.c.o:		${OBJFILES}
+.c.o:		${HEADFILES} ${OBJFILES}
 			${CC} -Wall -Wextra -Werror -I includes -c  $< -o ${<:.c=.o}
 
-${NAME}:	${OBJFILES}
+${NAME}:	${HEADFILES} ${OBJFILES}
 			ar rcs ${NAME} ${OBJFILES}
 
-all:		${NAME}
+all:		${HEADFILES} ${NAME}
 
 clean: 
 			rm -f ${OBJFILES}

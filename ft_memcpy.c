@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:59:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/04 11:54:04 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/08 13:18:46 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (retturn);
 }
-
-/*int main(void)
-{
-	char str[] = "based";
-	char *ptr = (str + 1);
-	char str1[] = "based";
-	char *ptr1 = (str + 1);
-
-	printf("REAL: %s\n", memcpy(str, ptr, 4));
-	printf("%s\n", ft_memcpy(str1, ptr1, 4));
-	return (0);
-}*/
