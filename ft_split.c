@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/10 16:46:02 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/10 18:30:27 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,6 @@ static	int	ft_word_len(char const *s, char c, int *start)
 	return (0);
 }
 
-static void	ft_filltab(char)
-{
-	    
-}
-
 char	**ft_split(char const *s, char c)
 {
 	size_t	wc;
@@ -73,19 +68,27 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < wc)
 	{
-		str[i] = ft_calloc((ft_word_len(s, c, &start) + 1), sizeof(char));
+		/*str[i] = ft_calloc((ft_word_len(s, c, &start) + 1), sizeof(char));
 		if (!str[i])
-			return (NULL);
-		
+			return (NULL);*/
+		word_len = ft_word_len(s, c, &start);
+		str[i] = ft_substr(s, start - word_len, word_len);
 		i++;
 	}
 	printf("word count: %zu\n", wc);
 	//printf("word len: %zu\n", word_len);
-	return (NULL);
+	return (str);
 }
 
 int	main(void)
 {
 	char	**str = ft_split("  mon logIn est Tschlege mais bientot   Wati-Theo ", ' ');
-	//printf("%s\n", str);
+	printf("ds\n");
+	printf("%s\n", str[0]);
+	printf("%s\n", str[1]);
+	printf("%s\n", str[2]);
+	printf("%s\n", str[3]);
+	printf("%s\n", str[4]);
+	printf("%s\n", str[5]);
+	printf("%s\n", str[6]);
 }
