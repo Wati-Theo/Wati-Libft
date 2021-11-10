@@ -6,20 +6,20 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:23:37 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/09 12:03:49 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/10 15:20:37 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-int	is_set(char const *set, char c)
+static	int	is_set(char const *set, char c)
 {
 	int	j;
 
 	j = 0;
 	while (set[j])
 	{
-		if (set[j] == c)
+		if (set[j] == (unsigned char)c)
 			return (1);
 		j++;
 	}
