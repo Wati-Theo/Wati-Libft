@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 12:02:12 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/12 15:39:22 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/12 16:54:02 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 #include "stdio.h"
 
-static	char	*ft_perfecto(char *str, int n, int len, int neg)
+static	void	ft_revtab(char *str)
 {
-	char	*strr;
+	char	tmp;
 	int		i;
+	int		offset;
+	int		len;
 
+	len = ft_strlen(str);
+	tmp = 0;
 	i = 0;
-	strr = ft_calloc(len + neg, sizeof(char));
-	if (!strr)
-		return (NULL);
-	if (n < 0)
-		strr[i] = '-';
-	while (len)
+	offset = 0;
+	if (str[0] == '-')
+		offset = 1;
+	while (i < len / 2)
 	{
-		strr[i] = str[len];
+		tmp = str[i + offset];
+		str[i + offset] = str[len - i - 1];
+		str[len - i - 1] = tmp;
 		i++;
-		len--;
 	}
-	strr[i] = 0;
-	return (strr);
 }
 
 static	int	ft_tabsize(int n)
@@ -50,11 +51,13 @@ static	int	ft_tabsize(int n)
 	return (tabsize);
 }
 
-static	void	ft_putchar(char c, char *str, int len, int n)
+static	void	ft_puttab(char c, char *str, int len, int n)
 {
 	int	i;
 
 	i = 0;
+	if (n < 0)
+		str[i++] = '-';
 	while (str[i] != 0 && i <= len)
 		i++;
 	if (i <= len)
@@ -63,14 +66,17 @@ static	void	ft_putchar(char c, char *str, int len, int n)
 
 static void	ft_putnbr(int n, int len, char *str)
 {
+	int	firstneg;
+
+	firstneg = n;
 	if (n < 0)
 		n = -n;
 	while (n > 9)
 	{
-		ft_putchar((n % 10) + '0', str, len, n);
+		ft_puttab((n % 10) + '0', str, len, firstneg);
 		n /= 10;
 	}
-	ft_putchar((n % 10) + '0', str, len, n);
+	ft_puttab((n % 10) + '0', str, len, firstneg);
 }
 
 char	*ft_itoa(int n)
@@ -80,24 +86,21 @@ char	*ft_itoa(int n)
 	int		neg;
 
 	neg = 1;
+	if (n == -2147483648)
+	{
+		str = ft_calloc(12, sizeof(char));
+		if (!str)
+			return (NULL);
+		str = "-2147483648";
+		return (str);
+	}
 	if (n < 0)
 		neg++;
 	len = ft_tabsize(n);
 	str = ft_calloc(len + neg, sizeof(char));
 	if (!str)
 		return (NULL);
-	if (n == -2147483648)
-		return ("-2147483648");
-	ft_putnbr(n, len, str);
-	str[len + 1] = 0;
-	return (ft_perfecto(str, n, len, neg));
-}
-
-int	main(void)
-{
-	//printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(-42));
-	printf("%s\n", ft_itoa(42));
-	//printf("%d\n", ft_tabsize(-42));
-	//printf("%d\n", ft_tabsize(42));
+	ft_putnbr(n, len + neg, str);
+	ft_revtab(str);
+	return (str);
 }
