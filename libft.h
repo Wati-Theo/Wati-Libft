@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:42:44 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/14 15:42:49 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/14 15:52:02 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char	*s, int fd);
+void	ft_putendl_fd(char	*s, int fd);
 
 #endif
