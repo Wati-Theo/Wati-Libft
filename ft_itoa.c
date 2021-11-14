@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 12:02:12 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/12 16:54:02 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/12 17:10:06 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,9 @@ char	*ft_itoa(int n)
 
 	neg = 1;
 	if (n == -2147483648)
-	{
-		str = ft_calloc(12, sizeof(char));
-		if (!str)
-			return (NULL);
-		str = "-2147483648";
-		return (str);
-	}
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n < 0)
 		neg++;
 	len = ft_tabsize(n);
