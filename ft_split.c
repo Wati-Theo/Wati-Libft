@@ -6,13 +6,27 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/12 11:56:22 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/14 19:34:21 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #include <stdio.h>
+
+char	**ft_freebox(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+	return (NULL);
+}
 
 static	size_t	ft_word_count(char const *s, char c)
 {
@@ -51,6 +65,11 @@ static	int	ft_word_len(char const *s, char c, int *start)
 	return (0);
 }
 
+/*static char	*ft_get_next_word(char **s, char c)
+{
+	
+}*/
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	wc;
@@ -70,13 +89,12 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < wc)
 	{
-		/*str[i] = ft_calloc((ft_word_len(s, c, &start) + 1), sizeof(char));
-		if (!str[i])
-			return (NULL);*/
 		word_len = ft_word_len(s, c, &start);
 		str[i] = ft_substr(s, start - word_len, word_len);
+		if (!str[i])
+			return (ft_freebox(str));
 		i++;
-	}
+	}  
 	// printf("word count: %zu\n", wc);
 	// printf("word len: %zu\n", word_len);
 	str[i] = 0;
