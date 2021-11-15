@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:33:06 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/08 15:48:32 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/15 14:10:02 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (unsigned char)c)

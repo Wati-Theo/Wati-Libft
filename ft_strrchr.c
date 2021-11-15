@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:27:23 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/08 15:52:02 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/15 14:26:12 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	size;
 
-	size = ft_strlen(s) + 1;
+	size = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	while (size + 1)
+	while (size >= 0)
 	{
 		if (s[size] == (unsigned char)c)
 			return ((char *)s + size);
