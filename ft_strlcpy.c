@@ -6,14 +6,11 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:23:05 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/14 22:27:03 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/15 13:55:37 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <string.h>
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
