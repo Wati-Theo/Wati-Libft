@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:20:54 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/08 10:34:03 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/16 11:20:56 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	the_nouvelle[i] = '\0';
 	return (the_nouvelle);
 }
+
+/*int	main(void)
+{
+	char	*str = "i just want this part #############";
+	
+	//printf("expected output: %s\n\n", substr(str, 5, 10));
+	printf("output: %s\n\n", ft_substr(str, 5, 10));
+}*/
