@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 18:49:20 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/15 14:02:21 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 15:35:26 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	i = 0;
 	res = 0;
+	if (!n)
+		return (0);
 	while (((char *)s1)[i] == ((char *)s2)[i] && i < (n - 1))
 		i++;
 	if (((char *)s1)[i] != ((char *)s2)[i])

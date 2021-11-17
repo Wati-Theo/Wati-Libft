@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:28:22 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/15 14:31:50 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 15:37:27 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	res = 0;
 	i = 0;
+	if (!n)
+		return (0);
 	while ((s1[i] == s2[i]) && i < (n - 1) && s1[i] && s2[i])
 		i++;
 	if (s1[i] != s2[i])
