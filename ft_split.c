@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/16 17:52:18 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 21:43:21 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,6 @@ static	int	ft_word_len(char const *s, char c, int *start)
 	return (0);
 }
 
-/*static char	*ft_get_next_word(char **s, char c)
-{
-	
-}*/
-
 char	**ft_split(char const *s, char c)
 {
 	size_t	wc;
@@ -87,9 +82,8 @@ char	**ft_split(char const *s, char c)
 	start = 0;
 	i = 0;
 	word_len = 0;
-	while (i+1 < wc)
+	while (i + 1 < wc)
 	{
-		// printf("i: %d, wl: %d, start: %d, res: %d\n", i, word_len, start, start - word_len);
 		word_len = ft_word_len(s, c, &start);
 		str[i] = ft_substr(s, start - word_len, word_len);
 		if (!str[i])
@@ -99,16 +93,3 @@ char	**ft_split(char const *s, char c)
 	str[i] = 0;
 	return (str);
 }
-
-// int	main(void)
-// {
-	// char	**str = ft_split("Mon Login est bientot Wati-Theo     ", ' ');
-// 
-	// printf("i:0 $%s\n", str[0]);
-	// printf("i:1 $%s\n", str[1]);
-	// printf("i:2 $%s\n", str[2]);
-	// printf("i:3 $%s\n", str[3]);
-	// printf("i:4 $%s\n", str[4]);
-	/*printf("%s\n", str[5]);
-	printf("%s\n", str[6]);*/
-// }

@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:24:20 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/07 17:45:40 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 21:43:56 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 char	*ft_strdup(const char *s1)
 {
 	size_t	s1_len;
-	char 	*copy;
-	int 	i;
+	char	*copy;
+	int		i;
 
-	i = 0;	
+	i = 0;
 	s1_len = ft_strlen(s1);
 	copy = malloc(sizeof(char) * (s1_len + 1));
 	if (!copy)

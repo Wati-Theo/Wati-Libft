@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:45:27 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/08 17:09:44 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 22:40:08 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	j = 0;
 	if (!needle[0])
 		return ((char *)haystack);
-	while (haystack[i] != needle[0] && i < len)
+	while (haystack[i] != needle[0] && i < len && haystack[i])
 		i++;
 	while (haystack[i] && i < len)
 	{
