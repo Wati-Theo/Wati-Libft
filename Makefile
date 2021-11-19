@@ -34,7 +34,8 @@ SRCFILES=	ft_putnbr_fd.c \
 			ft_toupper.c 
 
 
-BONUSFILES= ft_lstnew.c 
+BONUSFILES= ft_lstnew.c       \
+			ft_lstadd_front.c 
 
 HEADFILES= libft.h
 
