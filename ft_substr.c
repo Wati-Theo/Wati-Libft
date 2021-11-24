@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:20:54 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/17 17:19:24 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 16:02:39 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		the_nouvelle = ft_calloc((len + 1), sizeof(char));
 	else
 	{
-		the_nouvelle = ft_calloc((s_len - start), sizeof(char));
+		the_nouvelle = ft_calloc((s_len - start+1), sizeof(char));
 		len = s_len - start + 1;
 	}
 	if (!the_nouvelle)

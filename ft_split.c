@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/17 21:43:21 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 16:02:22 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static	size_t	ft_word_count(char const *s, char c)
 	{
 		while (s[i] == (unsigned char)c)
 			i++;
-		while (s[i] != (unsigned char)c && s[i])
+		while (s[i] && s[i] != (unsigned char)c)
 			i++;
 		if (!s[i] && s[i - 1] != (unsigned char)c)
 			wc++;
@@ -55,7 +55,7 @@ static	int	ft_word_len(char const *s, char c, int *start)
 	word_len = 0;
 	while (s[*start] == (unsigned char)c)
 		*start = *start + 1;
-	while (s[*start] != (unsigned char)c && s[*start])
+	while (s[*start] && s[*start] != (unsigned char)c)
 	{
 		*start = *start + 1;
 		word_len++;
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	wc = ft_word_count(s, c);
-	str = ft_calloc(wc, sizeof(char *));
+	str = ft_calloc(wc + 1, sizeof(char *));
 	if (!str)
 		return (NULL);
 	start = 0;
