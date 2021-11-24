@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:51:00 by wati-theo         #+#    #+#             */
-/*   Updated: 2021/11/23 18:44:03 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 12:12:08 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,29 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(f)(void *), void (*del)(void *))
 {
-	t_list	*firstnew;
+	t_list	*begin;
 	t_list	*element;
 
 	if (!lst)
 		return (NULL);
-	firstnew = ft_lstnew(f(lst->content));
-	if (!firstnew)
+	element = ft_lstnew(f(lst->content));
+	if (!element)
+	{
+		ft_lstclear(&element, del);
 		return (NULL);
+	}
 	lst = lst->next;
+	begin = element;
 	while (lst)
 	{
 		element = ft_lstnew(f(lst->content));
 		if (!element)
 		{
-			ft_lstclear(&firstnew, del);
+			ft_lstclear(&begin, del);
 			return (NULL);
-		}	
-		ft_lstadd_back(&element, element);
+		}
 		lst = lst->next;
+		ft_lstadd_back(&begin, element);
 	}
-	return (firstnew);
+	return (begin);
 }
