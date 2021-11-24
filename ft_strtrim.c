@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:23:37 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/10 15:20:37 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 17:24:25 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_calloc((end - start) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	while (start < end)
+	while (s1[start] && start < end)
 		str[i++] = s1[start++];
-	str[start] = '\0';
+	str[i] = '\0';
 	return (str);
 }

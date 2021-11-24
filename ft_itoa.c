@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 12:02:12 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/12 17:10:06 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 17:32:01 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ static	int	ft_tabsize(int n)
 	int	tabsize;
 
 	tabsize = 0;
-	if (n < 0)
-		tabsize++;
 	while (n)
 	{
 		n /= 10;

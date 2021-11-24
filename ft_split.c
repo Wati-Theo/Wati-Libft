@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:15:28 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/24 17:13:20 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 17:16:44 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,29 +83,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	start = 0;
 	i = 0;
-	word_len = 0;
 	while (i + 1 < wc)
 	{
 		word_len = ft_word_len(s, c, &start);
-		//printf("wc:  %d\n", wc);
 		str[i] = ft_substr(s, start - word_len, word_len);
-		if (!str[i])
+		if (!str[i++])
 			return (ft_freebox(str));
-		i++;
 	}
 	str[i] = 0;
 	return (str);
 }
-
-/*int	main(void)
-{
-	char **str= ft_split("chinimala", ' ');
-	int i = 0;
-
-	while (str[i])
-	{
-		printf("$%s$, i:%d\n", str[i], i);
-		i++;
-	}
-
-}*/
