@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:23:37 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/24 17:24:25 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/25 15:12:00 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1) - 1;

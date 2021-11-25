@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:46:34 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/07 22:23:48 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/25 15:10:36 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (!s2 && s1)
+		return (ft_strdup(s1));
+	if (!s1 && !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	stotal_len = ft_strlen(s1) + ft_strlen(s2);

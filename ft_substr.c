@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:20:54 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/24 17:03:20 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/25 15:27:09 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*the_nouvelle;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	i = 0;
 	if (start > s_len)
@@ -36,6 +38,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		the_nouvelle[i] = s[start + i];
 		i++;
 	}
-	the_nouvelle[i] = '\0';
 	return (the_nouvelle);
 }

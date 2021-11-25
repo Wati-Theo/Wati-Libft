@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 17:24:58 by tschlege          #+#    #+#             */
-/*   Updated: 2021/11/15 18:52:07 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2021/11/25 15:12:50 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*cpy;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	cpy = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!cpy)
